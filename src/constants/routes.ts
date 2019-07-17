@@ -1,0 +1,14 @@
+enum routes {
+  INIT = 'INIT',
+
+  LOGIN = 'LOGIN',
+  PASSWORD_CHANGE = 'PASSWORD_CHANGE',
+
+  MAIN = 'MAIN',
+  PROFILE = 'PROFILE',
+  CONTRACTS = 'CONTRACTS',
+  INVOICES = 'INVOICES',
+  SETTINGS = 'SETTINGS',
+}
+
+export default routes;
