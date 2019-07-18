@@ -4,7 +4,7 @@ import MainScreen from 'screens/MainScreen';
 
 const AppNavigation = createStackNavigator(
   {
-    [routes.MAIN]: MainScreen,
+    [routes.HOME]: MainScreen,
   },
   {
     headerMode: 'none',
