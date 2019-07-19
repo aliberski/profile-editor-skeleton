@@ -6,11 +6,12 @@ import routes from 'constants/routes';
 import { IProps } from './types';
 
 const LoadingScreen = (props: IProps) => {
-
   const resolveStartRoute = () => {
-    const { navigation: { navigate } } = props;
+    const {
+      navigation: { navigate },
+    } = props;
     // TODO: resolve start route
-    if (true) {
+    if (false) {
       navigate(routes.HOME);
     } else {
       navigate(routes.LOGIN);
@@ -21,9 +22,7 @@ const LoadingScreen = (props: IProps) => {
     setTimeout(resolveStartRoute, 1000); // TODO: remove fake delay
   }, []);
 
-  return (
-    <FullPageLoader />
-  );
+  return <FullPageLoader />;
 };
 
 export default LoadingScreen;

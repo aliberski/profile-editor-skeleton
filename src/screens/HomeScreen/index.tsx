@@ -1,8 +1,10 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text } from 'react-native';
+import I18n from 'services/i18n';
 
 import SafeView from 'components/SafeView';
 
+import { getScreenTitle } from 'helpers';
 import style from './style';
 import { IProps } from './types';
 
@@ -15,7 +17,7 @@ const HomeScreen = (props: IProps) => {
 };
 
 HomeScreen.navigationOptions = {
-  title: "Home",
+  title: getScreenTitle('home.screenTitle'),
 };
 
 export default HomeScreen;

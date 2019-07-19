@@ -1,0 +1,1 @@
+export { getScreenTitle } from './getScreenTitle';

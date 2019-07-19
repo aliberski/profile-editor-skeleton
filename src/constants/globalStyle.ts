@@ -1,6 +1,7 @@
 export const COLOR = {
   primary: '#f95959',
   secondary: '#fc8c8b',
+  disabled: '#4f4f4f',
   background: '#fff',
   error: '#f00',
 
