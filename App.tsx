@@ -1,19 +1,10 @@
 import React from 'react';
-import { View } from 'react-native';
 
-import SafeView from 'components/SafeView';
-
-import AppNavigation from 'navigation/AppNavigation';
+import AppNavigator from 'navigation/AppNavigator';
 
 
 const App = () => {
-  return (
-    <View style={{ flex: 1 }}>
-      <SafeView>
-        <AppNavigation />
-      </SafeView>
-    </View>
-  );
+  return <AppNavigator />;
 };
 
 export default App;

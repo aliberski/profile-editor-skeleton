@@ -20,3 +20,11 @@ export const FONT_SIZE = {
   small: 13,
   big: 20,
 };
+
+export const standardHeaderOptions = {
+  headerTintColor: COLOR.primary,
+  headerTitleStyle: {
+    fontSize: FONT_SIZE.primary,
+    color: COLOR.font,
+  },
+};

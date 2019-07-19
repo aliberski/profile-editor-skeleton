@@ -4,12 +4,12 @@ import { Text, View } from 'react-native';
 import style from './style';
 import { IProps } from './types';
 
-const MainScreen = (props: IProps) => {
+const LoginScreen = (props: IProps) => {
   return (
     <View style={style.container}>
-      <Text>MainScreen</Text>
+      <Text>LoginScreen</Text>
     </View>
   );
 };
 
-export default MainScreen;
+export default LoginScreen;
