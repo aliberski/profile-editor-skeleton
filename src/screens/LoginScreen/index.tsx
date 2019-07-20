@@ -5,7 +5,7 @@ import { Button, Title, Paragraph } from 'react-native-paper';
 import ScreenWrapper from 'components/ScreenWrapper';
 import Logo from 'components/Logo';
 
-import { COLOR } from 'constants/globalStyle';
+import { COLOR } from 'constants/style';
 import { getScreenTitle } from 'helpers';
 import I18n from 'services/i18n';
 import routes from 'constants/routes';

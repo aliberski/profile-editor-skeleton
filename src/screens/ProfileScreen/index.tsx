@@ -1,15 +1,17 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 
+import ScreenWrapper from 'components/ScreenWrapper';
+
 import { getScreenTitle } from 'helpers/getScreenTitle';
 import style from './style';
 import { IProps } from './types';
 
 const ProfileScreen = (props: IProps) => {
   return (
-    <View style={style.container}>
+    <ScreenWrapper>
       <Text>ProfileScreen</Text>
-    </View>
+    </ScreenWrapper>
   );
 };
 

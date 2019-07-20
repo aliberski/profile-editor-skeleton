@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { SPACING, COLOR } from 'constants/globalStyle';
+import { SPACING, COLOR } from 'constants/style';
 import { IStyle } from './types';
 
 export default StyleSheet.create<IStyle>({

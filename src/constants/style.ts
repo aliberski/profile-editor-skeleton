@@ -1,3 +1,5 @@
+import { Dimensions } from 'react-native';
+
 export const COLOR = {
   primary: '#f95959',
   secondary: '#fc8c8b',
@@ -34,3 +36,5 @@ export const standardHeaderOptions = {
     color: COLOR.font_light,
   },
 };
+
+export const DRAWER_WIDTH = Dimensions.get('window').width * 0.7;

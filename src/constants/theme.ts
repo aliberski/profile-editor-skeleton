@@ -1,5 +1,5 @@
 import { Platform } from 'react-native';
-import { COLOR } from 'constants/globalStyle';
+import { COLOR } from 'constants/style';
 
 const fonts = Platform.select({
   ios: {

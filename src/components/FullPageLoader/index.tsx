@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, ActivityIndicator } from 'react-native';
 
-import { COLOR } from 'constants/globalStyle';
+import { COLOR } from 'constants/style';
 import style from './style';
 
 const FullPageLoader = () => (

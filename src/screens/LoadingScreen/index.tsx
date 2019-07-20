@@ -11,7 +11,7 @@ const LoadingScreen = (props: IProps) => {
       navigation: { navigate },
     } = props;
     // TODO: resolve start route
-    if (false) {
+    if (true) {
       navigate(routes.HOME);
     } else {
       navigate(routes.LOGIN);
