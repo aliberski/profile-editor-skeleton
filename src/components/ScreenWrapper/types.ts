@@ -1,8 +1,7 @@
 import { ReactNode } from 'react';
 import { ViewStyle } from 'react-native';
-import { SafeAreaViewProps } from 'react-navigation';
 
-export interface IProps extends SafeAreaViewProps {
+export interface IProps {
   children: ReactNode;
   style?: ViewStyle;
 }
