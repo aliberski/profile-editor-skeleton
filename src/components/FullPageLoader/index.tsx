@@ -1,12 +1,13 @@
 import React from 'react';
-import { View, ActivityIndicator } from 'react-native';
+import { View } from 'react-native';
+import { ActivityIndicator } from 'react-native-paper';
 
 import { COLOR } from 'constants/style';
 import style from './style';
 
 const FullPageLoader = () => (
   <View style={style.container}>
-    <ActivityIndicator size='large' color={COLOR.primary} />
+    <ActivityIndicator animating size='large' color={COLOR.primary} />
   </View>
 );
 

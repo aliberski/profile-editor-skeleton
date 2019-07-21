@@ -43,6 +43,17 @@ export default {
   },
   profile: {
     screenTitle: 'Profile',
+    header: {
+      followers: 'Followers',
+      following: 'Following',
+    },
+    list: {
+      shots: 'Shots',
+      likes: 'Likes',
+      buckets: 'Buckets',
+      tags: 'Tags',
+    },
+    buttonLogout: 'Log out',
   },
   about: {
     screenTitle: 'About',

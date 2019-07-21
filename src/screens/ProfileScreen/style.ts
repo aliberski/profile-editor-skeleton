@@ -1,10 +1,10 @@
 import { StyleSheet } from 'react-native';
+import { SPACING } from 'constants/style';
 import { IStyle } from './types';
 
 export default StyleSheet.create<IStyle>({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+  buttonWrapper: {
+    marginTop: SPACING.primary,
+    marginBottom: SPACING.big,
   },
 });

@@ -1,7 +1,7 @@
 // route: ABOUT
 
 import React from 'react';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 import I18n from 'services/i18n';
 import { Title, Paragraph } from 'react-native-paper';
 
@@ -18,10 +18,10 @@ const AboutScreen = (props: IProps) => {
   return (
     <ScreenWrapper>
       <Logo />
-      <View style={style.content}>
+      <ScrollView style={style.content} bounces={false}>
         <Title style={style.text}>{I18n.t('about.title')}</Title>
         <Paragraph style={style.text}>{I18n.t('about.description')}</Paragraph>
-      </View>
+      </ScrollView>
     </ScreenWrapper>
   );
 };

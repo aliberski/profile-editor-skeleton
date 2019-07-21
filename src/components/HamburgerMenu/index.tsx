@@ -1,15 +1,15 @@
 import React from 'react';
-import { View, TouchableOpacity } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 import { withNavigation } from 'react-navigation';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
+import { COLOR } from 'constants/style';
 import { IProps } from './types';
-import style from './style';
+import style, { ICON_SIZE } from './style';
 
 const HamburgerMenu = ({ navigation: { toggleDrawer } }: IProps) => (
   <TouchableOpacity style={style.container} onPress={toggleDrawer}>
-    <View style={style.bar} />
-    <View style={style.bar} />
-    <View style={style.bar} />
+    <Icon name='dehaze' size={ICON_SIZE} color={COLOR.font_light} />
   </TouchableOpacity>
 );
 

@@ -4,5 +4,5 @@ import { INavigation } from 'constants/types';
 export interface IProps extends INavigation {}
 
 export interface IStyle {
-  container: ViewStyle;
+  buttonWrapper: ViewStyle;
 }
