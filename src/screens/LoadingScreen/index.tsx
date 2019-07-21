@@ -1,19 +1,22 @@
 // route: LOADING
 
 import React, { useEffect } from 'react';
+import { inject, observer } from 'mobx-react';
 
 import FullPageLoader from 'components/FullPageLoader/index';
 
+import { compose } from 'helpers';
+import { store } from 'stores';
 import routes from 'constants/routes';
 import { IProps } from './types';
 
 const LoadingScreen = (props: IProps) => {
-  const resolveStartRoute = () => {
+  const resolveStartRoute = async () => {
     const {
       navigation: { navigate },
+      profileStore: { token },
     } = props;
-    // TODO: resolve start route
-    if (false) {
+    if (token) {
       navigate(routes.HOME);
     } else {
       navigate(routes.LOGIN);
@@ -21,10 +24,13 @@ const LoadingScreen = (props: IProps) => {
   };
 
   useEffect(() => {
-    setTimeout(resolveStartRoute, 1000); // TODO: remove fake delay
+    resolveStartRoute();
   }, []);
 
   return <FullPageLoader />;
 };
 
-export default LoadingScreen;
+export default compose(
+  inject(store.profile),
+  observer,
+)(LoadingScreen);

@@ -18,6 +18,7 @@
     ],
     "no-any": false,
     "no-arg": true,
+    "experimentalDecorators": true,
     "no-bitwise": true,
     "no-conditional-assignment": true,
     "no-console": [true, "debug", "info", "time", "timeEnd", "trace"],
