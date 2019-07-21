@@ -6,6 +6,7 @@ Simple React Native app.
 
 ```
 yarn install
+cd ios/ && pod install && cd ..
 
 yarn ios
 OR
