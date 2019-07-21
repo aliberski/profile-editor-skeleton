@@ -11,6 +11,10 @@ export const COLOR = {
 
   font: '#000',
   font_light: '#fff',
+
+  home: '#03a9f4',
+  about: '#8bc34a',
+  profile: '#ffc107',
 };
 
 export const SPACING = {

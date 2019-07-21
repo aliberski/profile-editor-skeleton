@@ -6,6 +6,5 @@ export default StyleSheet.create<IStyle>({
   container: {
     paddingHorizontal: SPACING.primary,
     paddingTop: SPACING.primary,
-    backgroundColor: COLOR.background,
   },
 });

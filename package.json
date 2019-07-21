@@ -22,7 +22,8 @@
     "react-native-paper": "^2.16.0",
     "react-native-svg": "^9.5.3",
     "react-native-vector-icons": "^6.6.0",
-    "react-navigation": "^3.11.1"
+    "react-navigation": "^3.11.1",
+    "react-navigation-material-bottom-tabs": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.4",
@@ -32,6 +33,8 @@
     "@types/react": "^16.8.23",
     "@types/react-native": "^0.60.2",
     "@types/react-native-i18n": "^2.0.0",
+    "@types/react-native-vector-icons": "^6.4.1",
+    "@types/react-navigation-material-bottom-tabs": "^0.3.1",
     "jetifier": "^1.6.3",
     "metro-react-native-babel-preset": "^0.55.0",
     "react-native-svg-transformer": "^0.13.0",

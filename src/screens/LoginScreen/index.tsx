@@ -1,3 +1,5 @@
+// route: LOGIN
+
 import React from 'react';
 import { View } from 'react-native';
 import { Button, Title, Paragraph } from 'react-native-paper';

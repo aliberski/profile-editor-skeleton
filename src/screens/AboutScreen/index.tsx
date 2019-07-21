@@ -1,12 +1,16 @@
+// route: ABOUT
+
 import React from 'react';
 import { View } from 'react-native';
 import I18n from 'services/i18n';
 import { Title, Paragraph } from 'react-native-paper';
 
+import BottomNavIcon from 'components/BottomNavIcon';
 import ScreenWrapper from 'components/ScreenWrapper';
 import Logo from 'components/Logo';
 
-import { getScreenTitle } from 'helpers';
+import { COLOR } from 'constants/style';
+import routes from 'constants/routes';
 import style from './style';
 import { IProps } from './types';
 
@@ -23,7 +27,8 @@ const AboutScreen = (props: IProps) => {
 };
 
 AboutScreen.navigationOptions = {
-  title: getScreenTitle('about.screenTitle'),
+  tabBarIcon: <BottomNavIcon route={routes.ABOUT} />,
+  tabBarColor: COLOR.about,
 };
 
 export default AboutScreen;

@@ -1,34 +1,14 @@
-import { Platform } from 'react-native';
+import { DefaultTheme } from 'react-native-paper';
 import { COLOR } from 'constants/style';
 
-const fonts = Platform.select({
-  ios: {
-    regular: 'Helvetica Neue',
-    medium: 'HelveticaNeue-Medium',
-    light: 'HelveticaNeue-Light',
-    thin: 'HelveticaNeue-Thin',
-  },
-  default: {
-    regular: 'sans-serif',
-    medium: 'sans-serif-medium',
-    light: 'sans-serif-light',
-    thin: 'sans-serif-thin',
-  },
-});
-
 export default {
-  dark: true,
-  roundness: 4,
+  ...DefaultTheme,
   colors: {
+    ...DefaultTheme.colors,
     primary: COLOR.primary,
-    background: COLOR.background,
-    surface: 'white',
     accent: COLOR.secondary,
     error: COLOR.error,
     text: COLOR.font,
     disabled: COLOR.disabled,
-    placeholder: COLOR.disabled,
-    backdrop: 'black',
   },
-  fonts,
 };

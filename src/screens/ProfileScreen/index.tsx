@@ -1,9 +1,13 @@
+// route: PROFILE
+
 import React from 'react';
 import { Text, View } from 'react-native';
 
 import ScreenWrapper from 'components/ScreenWrapper';
+import BottomNavIcon from 'components/BottomNavIcon';
 
-import { getScreenTitle } from 'helpers/getScreenTitle';
+import routes from 'constants/routes';
+import { COLOR } from 'constants/style';
 import style from './style';
 import { IProps } from './types';
 
@@ -16,7 +20,8 @@ const ProfileScreen = (props: IProps) => {
 };
 
 ProfileScreen.navigationOptions = {
-  title: getScreenTitle('profile.screenTitle'),
+  tabBarIcon: <BottomNavIcon route={routes.PROFILE} />,
+  tabBarColor: COLOR.profile,
 };
 
 export default ProfileScreen;

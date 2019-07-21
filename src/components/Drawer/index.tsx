@@ -32,6 +32,7 @@ const renderDrawerItems = (navigation: NavigationScreenProp<any>) => {
 
   return drawerItems.map(({ label, route }: IDrawerItem) => (
     <PaperDrawer.Item
+      key={route}
       label={label}
       active={route === currentRoute}
       onPress={() => navigate(route)}

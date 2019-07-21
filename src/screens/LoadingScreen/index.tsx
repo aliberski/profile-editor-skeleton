@@ -1,3 +1,5 @@
+// route: LOADING
+
 import React, { useEffect } from 'react';
 
 import FullPageLoader from 'components/FullPageLoader/index';

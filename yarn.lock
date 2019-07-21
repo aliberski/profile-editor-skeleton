@@ -1054,13 +1054,37 @@
   dependencies:
     "@types/i18n-js" "*"
 
-"@types/react-native@^0.60.2":
+"@types/react-native-vector-icons@^6.4.1":
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/@types/react-native-vector-icons/-/react-native-vector-icons-6.4.1.tgz#d0862f3eb97bbe5720ab604f2f10ee07dacb31ef"
+  integrity sha512-2C9jyyJKEjzX0C4nP+9rNNjEhutWwalkRdaSTEYtNjUkkkTk68WGG2hgjrcBjdm4Gn1Vi9OgUd+FR8GNmCyp+A==
+  dependencies:
+    "@types/react" "*"
+    "@types/react-native" "*"
+
+"@types/react-native@*", "@types/react-native@^0.60.2":
   version "0.60.2"
   resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.60.2.tgz#2dca78481a904419c2a5907288dd97d1090c6e3c"
   integrity sha512-K4+/etirpv52xu24xAc++OdhbD0VQEt0Kq0h6dZrLU82OlA+I7BhpKF3JBvx9tbmrFaZDxhHp8N4TEvRYS4fdQ==
   dependencies:
     "@types/prop-types" "*"
     "@types/react" "*"
+
+"@types/react-navigation-material-bottom-tabs@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@types/react-navigation-material-bottom-tabs/-/react-navigation-material-bottom-tabs-0.3.1.tgz#c0856e68e4fe42d41a4c8cc1bc3984f287b80142"
+  integrity sha512-ywdoyaDvCP+dsdShB+O9HmBJ93hQV4JkfzlG2yF80Ec5wemliJUjdzWM8vjnVloDURxUKnSawxRZ5wR1/YQUCQ==
+  dependencies:
+    "@types/react-native" "*"
+    "@types/react-navigation" "*"
+
+"@types/react-navigation@*":
+  version "3.0.7"
+  resolved "https://registry.yarnpkg.com/@types/react-navigation/-/react-navigation-3.0.7.tgz#5d327b00de2bb58203977002c3ea21302da72034"
+  integrity sha512-JFsNeCAQEQGTpObiD1QczDyCyQkFBaQA/F85Fo2W8QML1b6UNYHlUDtEYJA6jcfXqPoL15dVPBVj9NBJlHToqA==
+  dependencies:
+    "@types/react" "*"
+    "@types/react-native" "*"
 
 "@types/react@*", "@types/react@^16.8.23":
   version "16.8.23"
@@ -4280,7 +4304,7 @@ react-native-svg@^9.5.3:
   resolved "https://registry.yarnpkg.com/react-native-svg/-/react-native-svg-9.5.3.tgz#2389f3ffd700c6441166496a1aeade31ead89c59"
   integrity sha512-VUOe4TLz7RFdmm/XT9EH87VSwlRykx49qbwJMA+dh9eFM7KPY1qH3kEyN7uRCqJD2eE8toxt9NpjR6ByvtPNlA==
 
-react-native-tab-view@^1.2.0, react-native-tab-view@^1.4.1:
+react-native-tab-view@^1.0.0, react-native-tab-view@^1.2.0, react-native-tab-view@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/react-native-tab-view/-/react-native-tab-view-1.4.1.tgz#f113cd87485808f0c991abec937f70fa380478b9"
   integrity sha512-Bke8KkDcDhvB/z0AS7MnQKMD2p6Kwfc1rSKlMOvg9CC5CnClQ2QEnhPSbwegKDYhUkBI92iH/BYy7hNSm5kbUQ==
@@ -4349,10 +4373,29 @@ react-navigation-drawer@~1.2.1:
   dependencies:
     react-native-tab-view "^1.2.0"
 
+react-navigation-material-bottom-tabs@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-navigation-material-bottom-tabs/-/react-navigation-material-bottom-tabs-1.0.0.tgz#4fc3f21c57891e3a5bff88679afd84801d69adb7"
+  integrity sha512-fmPOt82xYpNYWh7gDdk38ce2TDmKuGnVaC7Pd67Ss62bjZ2CwmX9kOXExThtdY039zDGIcABDq9h65c8TQeTUA==
+  dependencies:
+    hoist-non-react-statics "^2.5.0"
+    prop-types "^15.6.0"
+    react-navigation-tabs "1.0.0"
+
 react-navigation-stack@~1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/react-navigation-stack/-/react-navigation-stack-1.4.0.tgz#69cdb029ea4ee5877d7e933b3117dc90bc841eb2"
   integrity sha512-zEe9wCA0Ot8agarYb//0nSWYW1GM+1R0tY/nydUV0EizeJ27At0EklYVWvYEuYU6C48va6cu8OPL7QD/CcJACw==
+
+react-navigation-tabs@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-navigation-tabs/-/react-navigation-tabs-1.0.0.tgz#f9fe3eb8b77787551d017d1279ec049c3bed4950"
+  integrity sha512-2oWPk+XfwHihgdOBhuAuzzU94NPhwdvuzseL30R3VsggunfVB4cUtNiQjRP4rVVpdGgJygQtws1eRbUsQ9cECA==
+  dependencies:
+    hoist-non-react-statics "^2.5.0"
+    prop-types "^15.6.1"
+    react-lifecycles-compat "^3.0.4"
+    react-native-tab-view "^1.0.0"
 
 react-navigation-tabs@~1.1.4:
   version "1.1.4"
