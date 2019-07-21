@@ -2,8 +2,8 @@ import { ViewStyle, TextStyle } from 'react-native';
 
 export interface IProps {
   avatar: string;
-  name: string;
-  country?: string;
+  title: string;
+  subtitle?: string;
 }
 
 export interface IStyle {

@@ -3,12 +3,15 @@
 import React from 'react';
 import { View } from 'react-native';
 import { Button } from 'react-native-paper';
+import { inject, observer } from 'mobx-react';
 
 import ScreenWrapper from 'components/ScreenWrapper';
 import BottomNavIcon from 'components/BottomNavIcon';
 import ProfileHeader from './ProfileHeader/index';
 import ProfileList from './ProfileList';
 
+import { compose } from 'helpers';
+import { store } from 'stores';
 import I18n from 'services/i18n';
 import routes from 'constants/routes';
 import { COLOR } from 'constants/style';
@@ -23,18 +26,24 @@ const renderLogoutButton = (onPress: () => void) => (
   </View>
 );
 
-// TODO: display profile data
 const ProfileScreen = (props: IProps) => {
+  const { profileStore } = props;
+
   const logout = () => {
-    // TODO:
+    profileStore.logout();
+    props.navigation.navigate(routes.LOGIN);
   };
+
+  const {
+    user: { first_name, last_name, email, picture },
+  } = profileStore;
 
   return (
     <>
       <ProfileHeader
-        avatar='https://picsum.photos/700'
-        name='John Doe'
-        country='Poland'
+        avatar={picture.data.url}
+        title={`${first_name} ${last_name}`}
+        subtitle={email}
       />
       <ScreenWrapper>
         <ProfileList />
@@ -49,4 +58,7 @@ ProfileScreen.navigationOptions = {
   tabBarColor: COLOR.profile,
 };
 
-export default ProfileScreen;
+export default compose(
+  inject(store.profile),
+  observer,
+)(ProfileScreen);

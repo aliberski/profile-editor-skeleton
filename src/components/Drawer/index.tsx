@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { View } from 'react-native';
 import { Drawer as PaperDrawer, Button } from 'react-native-paper';
 import I18n from 'react-native-i18n';
 import { withNavigation, NavigationScreenProp } from 'react-navigation';
+import { inject, observer } from 'mobx-react';
 
 import SafeView from 'components/SafeView';
 
-import { getCurrentRoute } from 'helpers';
+import { store } from 'stores';
+import { getCurrentRoute, compose } from 'helpers';
 import routes from 'constants/routes';
 import { IProps, IDrawerItem } from './types';
 import style from './style';
@@ -49,9 +51,10 @@ const renderLogoutButton = (onPress: () => void) => (
 );
 
 const Drawer = (props: IProps) => {
-  const logout = () => {
-    // TODO: handle logout
-    props.navigation.navigate(routes.LOGIN);
+  const handleLogout = () => {
+    const { profileStore, navigation } = props;
+    profileStore.logout();
+    navigation.navigate(routes.LOGIN);
   };
 
   return (
@@ -59,9 +62,13 @@ const Drawer = (props: IProps) => {
       <PaperDrawer.Section>
         {renderDrawerItems(props.navigation)}
       </PaperDrawer.Section>
-      {renderLogoutButton(logout)}
+      {renderLogoutButton(handleLogout)}
     </SafeView>
   );
 };
 
-export default withNavigation(Drawer);
+export default compose(
+  withNavigation,
+  inject(store.profile),
+  observer,
+)(Drawer);

@@ -1,4 +1,4 @@
-import { observable, action, computed } from 'mobx';
+import { observable, action, computed, toJS } from 'mobx';
 import facebookService from 'services/FacebookService';
 
 class ProfileStore {
@@ -7,8 +7,8 @@ class ProfileStore {
   @observable public loading = false;
   @observable public success = false;
 
-  @computed public get user() {
-    return this.userData;
+  public get user() {
+    return toJS(this.userData);
   }
 
   @computed public get token() {
@@ -41,6 +41,10 @@ class ProfileStore {
     await this.setAccessToken();
     await this.setUserData();
     this.loading = false;
+    setTimeout(() => {
+      // NOTE: yes I know it could be handled better :)
+      this.success = false;
+    }, 1000);
   };
 
   @action public logout = async () => {

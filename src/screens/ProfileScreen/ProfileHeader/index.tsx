@@ -23,7 +23,7 @@ const renderIcon = (name: string, onPress: () => void) => (
   />
 );
 
-const ProfileHeader = ({ avatar, name, country }: IProps) => {
+const ProfileHeader = ({ avatar, title, subtitle }: IProps) => {
   const onSettingsPress = () => {
     console.log('Settings');
   };
@@ -40,8 +40,8 @@ const ProfileHeader = ({ avatar, name, country }: IProps) => {
       </View>
       <Avatar.Image source={{ uri: avatar }} size={AVATAR_SIZE} />
       <View style={style.userDetails}>
-        <Title style={style.headerText}>{name}</Title>
-        <Text style={style.headerText}>{country}</Text>
+        <Title style={style.headerText}>{title}</Title>
+        <Text style={style.headerText}>{subtitle}</Text>
       </View>
       <View style={style.footer}>
         {renderFooterItem(120, I18n.t('profile.header.followers'))}
