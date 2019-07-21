@@ -1,22 +1,25 @@
 // route: HOME
 
 import React from 'react';
-import { Text } from 'react-native';
-import I18n from 'services/i18n';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { Divider, Title } from 'react-native-paper';
 
 import BottomNavIcon from 'components/BottomNavIcon';
 import ScreenWrapper from 'components/ScreenWrapper';
+import HomeChips from './HomeChips';
+import HomeList from './HomeList';
 
+import I18n from 'services/i18n';
 import routes from 'constants/routes';
 import { COLOR } from 'constants/style';
-import style from './style';
 import { IProps } from './types';
 
 const HomeScreen = (props: IProps) => {
   return (
     <ScreenWrapper>
-      <Text>HomeScreen</Text>
+      <Title>{I18n.t('home.title')}</Title>
+      <HomeChips />
+      <Divider />
+      <HomeList />
     </ScreenWrapper>
   );
 };

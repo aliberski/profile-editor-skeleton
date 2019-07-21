@@ -1,6 +1,38 @@
 export default {
   home: {
     screenTitle: 'Home',
+    title: 'Profile Editor',
+    chips: {
+      one: 'lorem ipsum',
+      two: 'dolor sit amet',
+      three: 'consectetur adipisicing elit',
+      four: 'Pariatur',
+      five: 'temporibus',
+      six: 'culpa cum repellat ratione',
+      seven: 'amet dolorem dolorum',
+    },
+    cards: {
+      one: {
+        title: 'Card one title',
+        subtitle: 'Card one subtitle',
+      },
+      two: {
+        title: 'Card two title',
+        subtitle: 'Card two subtitle',
+      },
+      three: {
+        title: 'Card three title',
+        subtitle: 'Card three subtitle',
+      },
+      four: {
+        title: 'Card four title',
+        subtitle: 'Card four subtitle',
+      },
+      five: {
+        title: 'Card five title',
+        subtitle: 'Card five subtitle',
+      },
+    },
   },
   login: {
     screenTitle: 'Login',

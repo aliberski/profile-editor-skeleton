@@ -4,8 +4,12 @@ import { IStyle } from './types';
 
 export default StyleSheet.create<IStyle>({
   container: {
-    alignItems: 'center',
-    width: '100%',
-    padding: SPACING.primary,
+    paddingVertical: SPACING.primary,
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+  },
+  chip: {
+    marginRight: SPACING.small,
+    marginBottom: SPACING.primary,
   },
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 import { withNavigation } from 'react-navigation';
 
 import routes from 'constants/routes';
@@ -25,11 +25,11 @@ const BottomNavIcon = ({ route, navigation }: IProps) => {
   }
 
   if (route === routes.PROFILE) {
-    return renderIcon('user');
+    return renderIcon('person');
   }
 
   if (route === routes.ABOUT) {
-    return renderIcon('rocket');
+    return renderIcon('whatshot');
   }
 
   return null;
