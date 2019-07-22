@@ -3,18 +3,15 @@ import { persist } from 'mobx-persist';
 import facebookService from 'services/FacebookService';
 import { listData } from './data';
 
-// NOTE: I had some issues with persisting `userData` (mobx-persist bug?)
-// so I stored only `accessToken` and I fetch the data after rehydrate
-
 class ProfileStore {
-  @observable public userData = null;
+  @persist @observable public userData = '';
   @persist @observable public accessToken = '';
   @observable public listData = listData;
   @observable public loading = false;
   @observable public success = false;
 
   @computed public get user() {
-    return toJS(this.userData);
+    return JSON.parse(this.userData);
   }
 
   @computed public get token() {
@@ -31,11 +28,11 @@ class ProfileStore {
     }
     const user: any = this.user;
     if (typeof user === 'object') {
-      this.userData = {
+      this.userData = JSON.stringify({
         ...user,
         first_name,
         last_name,
-      };
+      });
     }
   };
 
@@ -45,7 +42,7 @@ class ProfileStore {
     }
     const userData = await facebookService.getUserData(this.accessToken);
     if (userData) {
-      this.userData = toJS(userData);
+      this.userData = JSON.stringify(userData);
       this.loading = false;
       this.success = true;
     }
@@ -66,14 +63,13 @@ class ProfileStore {
     await this.setUserData();
     this.loading = false;
     setTimeout(() => {
-      // NOTE: yes I know it could be handled better :)
       this.success = false;
     }, 1000);
   };
 
   @action public logout = async () => {
     this.success = false;
-    this.userData = null;
+    this.userData = '';
     this.accessToken = '';
     await facebookService.logOut();
     this.loading = false;

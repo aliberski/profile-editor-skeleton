@@ -14,7 +14,7 @@ import { IProps } from './types';
 const LoadingScreen = (props: IProps) => {
   const [hydrated, setHydrated] = useState<boolean>(false);
   const {
-    profileStore: { token, setUserData },
+    profileStore: { token },
   } = props;
 
   const resolveStartRoute = async () => {
@@ -31,7 +31,6 @@ const LoadingScreen = (props: IProps) => {
   useEffect(() => {
     hydrate(store.profile, profileStore).then(async () => {
       console.log(`${store.profile} hydrated...`);
-      await setUserData();
       setHydrated(true);
     });
   }, []);

@@ -23,7 +23,7 @@ export interface IUserData {
 
 export interface IProfileStore {
   accessToken: TokenType;
-  userData: IUserData;
+  userData: string;
   loading: boolean;
   success: boolean;
   token: TokenType;
