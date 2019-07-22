@@ -46,7 +46,7 @@ const ProfileScreen = (props: IProps) => {
         subtitle={email}
       />
       <ScreenWrapper>
-        <ProfileList />
+        <ProfileList data={profileStore.list} />
         {renderLogoutButton(logout)}
       </ScreenWrapper>
     </>

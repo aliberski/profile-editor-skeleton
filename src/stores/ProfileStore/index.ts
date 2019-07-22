@@ -1,6 +1,7 @@
 import { observable, action, computed, toJS } from 'mobx';
 import { persist } from 'mobx-persist';
 import facebookService from 'services/FacebookService';
+import { listData } from './data';
 
 // NOTE: I had some issues with persisting `userData` (mobx-persist bug?)
 // so I stored only `accessToken` and I fetch the data after rehydrate
@@ -8,6 +9,7 @@ import facebookService from 'services/FacebookService';
 class ProfileStore {
   @observable public userData = null;
   @persist @observable public accessToken = '';
+  @observable public listData = listData;
   @observable public loading = false;
   @observable public success = false;
 
@@ -17,6 +19,10 @@ class ProfileStore {
 
   @computed public get token() {
     return this.accessToken;
+  }
+
+  @computed public get list() {
+    return toJS(this.listData);
   }
 
   @action public setUserData = async () => {

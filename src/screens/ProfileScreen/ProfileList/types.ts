@@ -1,9 +1,11 @@
 import { IProps as IListItemProps } from 'components/ListItem/types';
 
-export interface IItem extends IListItemProps {}
+export interface IProps {
+  data: IListItemProps[];
+}
 
 export interface IListItem {
-  item: IItem;
+  item: IListItemProps;
   index: number;
   separators: any;
 }

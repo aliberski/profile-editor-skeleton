@@ -34,6 +34,9 @@ const LoadingScreen = (props: IProps) => {
       await setUserData();
       setHydrated(true);
     });
+  }, []);
+
+  useEffect(() => {
     if (hydrated) {
       resolveStartRoute();
     }

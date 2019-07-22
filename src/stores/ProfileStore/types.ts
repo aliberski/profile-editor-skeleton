@@ -1,3 +1,7 @@
+import { IProps as IListItemProps } from 'components/ListItem/types';
+
+export interface IItem extends IListItemProps {}
+
 export type TokenType = string;
 
 export interface IPicture {
@@ -24,6 +28,8 @@ export interface IProfileStore {
   success: boolean;
   token: TokenType;
   user: IUserData;
+  list: IItem[];
+  listData: IItem[];
   login: () => void;
   logout: () => void;
   setAccessToken: () => void;
