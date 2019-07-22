@@ -1,8 +1,8 @@
 import { ViewStyle } from 'react-native';
+import { IChip } from 'stores/HomeStore/types';
 
-export interface IChip {
-  icon: string | undefined;
-  text: string;
+export interface IProps {
+  data: IChip[];
 }
 
 export interface IStyle {

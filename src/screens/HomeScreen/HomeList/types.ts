@@ -1,10 +1,8 @@
 import { ViewStyle } from 'react-native';
+import { ICard } from 'stores/HomeStore/types';
 
-export interface ICard {
-  uri: string;
-  title: string;
-  subtitle: string;
-  icon: string;
+export interface IProps {
+  data: ICard[];
 }
 
 export interface IListItem {
