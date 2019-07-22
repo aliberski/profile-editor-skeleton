@@ -25,6 +25,20 @@ class ProfileStore {
     return toJS(this.listData);
   }
 
+  @action public editName = (first_name: string, last_name: string) => {
+    if (!this.userData) {
+      return;
+    }
+    const user: any = this.user;
+    if (typeof user === 'object') {
+      this.userData = {
+        ...user,
+        first_name,
+        last_name,
+      };
+    }
+  };
+
   @action public setUserData = async () => {
     if (!this.accessToken) {
       return;

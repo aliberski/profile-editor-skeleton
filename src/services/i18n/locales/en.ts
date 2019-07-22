@@ -46,6 +46,7 @@ export default {
     header: {
       followers: 'Followers',
       following: 'Following',
+      buttonEdit: 'Edit',
     },
     list: {
       shots: 'Shots',
@@ -54,6 +55,12 @@ export default {
       tags: 'Tags',
     },
     buttonLogout: 'Log out',
+    modal: {
+      title: 'Edit your name',
+      labelFirst: 'First name',
+      labelSecond: 'Second name',
+      buttonSave: 'Save',
+    },
   },
   about: {
     screenTitle: 'About',

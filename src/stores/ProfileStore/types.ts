@@ -30,6 +30,7 @@ export interface IProfileStore {
   user: IUserData;
   list: IItem[];
   listData: IItem[];
+  editName: (first_name: string, last_name: string) => void;
   login: () => void;
   logout: () => void;
   setAccessToken: () => void;

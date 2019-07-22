@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import { View } from 'react-native';
-import { Avatar, Title, Text } from 'react-native-paper';
+import { Avatar, Title, Text, Button } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import I18n from 'services/i18n';
@@ -23,7 +23,7 @@ const renderIcon = (name: string, onPress: () => void) => (
   />
 );
 
-const ProfileHeader = ({ avatar, title, subtitle }: IProps) => {
+const ProfileHeader = ({ avatar, title, subtitle, onEditPress }: IProps) => {
   const onSettingsPress = () => {
     console.log('Settings');
   };
@@ -45,6 +45,9 @@ const ProfileHeader = ({ avatar, title, subtitle }: IProps) => {
       </View>
       <View style={style.footer}>
         {renderFooterItem(120, I18n.t('profile.header.followers'))}
+        <Button onPress={onEditPress}>
+          {I18n.t('profile.header.buttonEdit')}
+        </Button>
         {renderFooterItem(87, I18n.t('profile.header.following'))}
       </View>
     </View>

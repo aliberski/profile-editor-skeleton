@@ -1,8 +1,9 @@
-import { ViewStyle, TextStyle } from 'react-native';
+import { ViewStyle } from 'react-native';
 
 export interface IProps {
   avatar: string;
   title: string;
+  onEditPress: () => void;
   subtitle?: string;
 }
 
